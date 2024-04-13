@@ -1,4 +1,4 @@
-# Copyright Jiaqi Liu
+# Copyright Paion Data
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -22,30 +22,4 @@ name: CI/CD
 
 jobs:
   yml-md-style-and-link-checks:
-    uses: QubitPi/hashicorp-aws/.github/workflows/yml-md-style-and-link-checks.yml@master
-
-  test-upversion:
-    name: Test upversion.py
-    outputs:
-      outcome: ${{ job.status }}
-    continue-on-error: true
-    needs: yml-md-style-and-link-checks
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v4
-      - run: echo "LAST_TAG=1.2.3" >> $GITHUB_ENV
-      - run: |
-          NEW_TAG=$(LAST_TAG=${LAST_TAG} python upversion.py)
-          if [[ "$NEW_TAG" != "1.2.4" ]]; then
-              exit 1
-          fi
-
-  slack-notification:
-    name: Send Slack Notification
-    if: ${{ always() }}
-    needs: test-upversion
-    uses: QubitPi/hashicorp-aws/.github/workflows/slack-notification.yml@master
-    with:
-      job-status: ${{ needs.test-upversion.outputs.outcome }}
-    secrets:
-      slack-webhook-url: ${{ secrets.SLACK_WEBHOOK_URL }}
+    uses: paion-data/github-actions-core/.github/workflows/yml-md-style-and-link-checks.yml@master
