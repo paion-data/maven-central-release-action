@@ -1,4 +1,4 @@
-# Copyright Jiaqi Liu
+# Copyright Paion Data
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -12,7 +12,7 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 ---
-name: "Maven Central Release Action"
+name: "Maven Central Release"
 description: "Deploying artifacts to Maven Central in one action"
 branding:
   icon: "package"
@@ -67,16 +67,15 @@ runs:
         git config --global user.name ${{ inputs.user }}
         git config --global user.email ${{ inputs.email }}
 
-        git clone https://github.com/QubitPi/hashicorp-aws.git ../hashicorp-aws
-        cp ../hashicorp-aws/.github/version-bump/tag-for-release.bash .github/
-        cp ../hashicorp-aws/.github/version-bump/upversion.py .github/
+        git clone https://github.com/paion-data/maven-central-release-action.git ../maven-central-release-action
+        cp ../maven-central-release-action/tag-for-release.bash .github/
+        cp ../maven-central-release-action/upversion.py .github/
         .github/tag-for-release.bash
       shell: bash
 
     - name: Set up Java
       uses: actions/setup-java@v3
       with:
-        # https://stackoverflow.com/a/77710731/14312712
         java-version: ${{ inputs.java-version }}
         distribution: ${{ inputs.distribution }}
         server-id: ${{ inputs.gpg-keyname }}

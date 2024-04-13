@@ -264,8 +264,8 @@ the following information.
   ```xml
   <developers>
       <developer>
-          <name>Jiaqi Liu</name>
-          <url>https://github.com/QubitPi</url>
+          <name>Paion Data Team</name>
+          <url>https://github.com/paion-data</url>
       </developer>
   </developers>
   ```
@@ -302,8 +302,8 @@ the following information.
 
     <developers>
         <developer>
-            <name>Jiaqi Liu</name>
-            <url>https://github.com/QubitPi</url>
+            <name>Paion Data Team</name>
+            <url>https://github.com/paion-data</url>
         </developer>
     </developers>
 
@@ -430,7 +430,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Release
-        uses: QubitPi/maven-central-release-action@master
+        uses: paion-data/maven-central-release-action@master
         with:
           user: QubitPi
           email: jack20220723@gmail.com
@@ -534,12 +534,6 @@ License
 
 The use and distribution terms for [maven-central-release-action] are covered by the [Apache License, Version 2.0].
 
-<div align="center">
-    <a href="https://opensource.org/licenses">
-        <img align="center" width="50%" alt="License Illustration" src="https://github.com/QubitPi/QubitPi/blob/master/img/apache-2.png?raw=true">
-    </a>
-</div>
-
 [Apache License, Version 2.0]: http://www.apache.org/licenses/LICENSE-2.0.html
 [Apache License badge]: https://img.shields.io/badge/Apache%202.0-F25910.svg?style=for-the-badge&logo=Apache&logoColor=white
 [Apache License URL]: https://www.apache.org/licenses/LICENSE-2.0
@@ -550,8 +544,8 @@ The use and distribution terms for [maven-central-release-action] are covered by
 
 [GitHub Actions Marketplace badge]: https://img.shields.io/badge/View%20On%20Marketplace-2088FF?style=for-the-badge&logo=githubactions&logoColor=white
 [GitHub Actions Marketplace URL]: https://github.com/marketplace/actions/maven-central-release-action
-[GitHub Workflow Status badge]: https://img.shields.io/github/actions/workflow/status/QubitPi/maven-central-release-action/ci-cd.yml?branch=master&logo=github&style=for-the-badge
-[GitHub Workflow Status URL]: https://github.com/QubitPi/maven-central-release-action/actions/workflows/ci-cd.yml
+[GitHub Workflow Status badge]: https://img.shields.io/github/actions/workflow/status/paion-data/maven-central-release-action/ci-cd.yml?branch=master&logo=github&style=for-the-badge
+[GitHub Workflow Status URL]: https://github.com/paion-data/maven-central-release-action/actions/workflows/ci-cd.yml
 
 [maven-central-release-action]: https://github.com/QubitPi/maven-central-release-action
 [Maven Central account page]: https://central.sonatype.com/account
