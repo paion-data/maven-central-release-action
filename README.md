@@ -516,7 +516,7 @@ The use and distribution terms for [maven-central-release-action] are covered by
 [Create a GitHub Secret]: https://docs.github.com/en/actions/security-guides/encrypted-secrets
 
 [GitHub Actions Marketplace badge]: https://img.shields.io/badge/View%20On%20Marketplace-2088FF?style=for-the-badge&logo=githubactions&logoColor=white
-[GitHub Actions Marketplace URL]: https://github.com/marketplace/actions/maven-central-release-action
+[GitHub Actions Marketplace URL]: https://github.com/marketplace/actions/maven-central-release
 [GitHub Workflow Status badge]: https://img.shields.io/github/actions/workflow/status/paion-data/maven-central-release-action/ci-cd.yml?branch=master&logo=github&style=for-the-badge
 [GitHub Workflow Status URL]: https://github.com/paion-data/maven-central-release-action/actions/workflows/ci-cd.yml
 
