@@ -60,9 +60,9 @@ runs:
         git config --global user.name ${{ inputs.user }}
         git config --global user.email ${{ inputs.email }}
 
-        git clone https://github.com/paion-data/maven-central-release-action.git ../maven-central-release-action
-        cp ../maven-central-release-action/.github/tag-for-release.bash .github/
-        cp ../maven-central-release-action/.github/upversion.py .github/
+        git clone https://github.com/paion-data/github-actions-core.git ../github-actions-core
+        cp ../github-actions-core/.github/tag-for-release.bash .github/
+        cp ../github-actions-core/.github/upversion.py .github/
         .github/tag-for-release.bash
       shell: bash
 
