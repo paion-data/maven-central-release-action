@@ -93,6 +93,9 @@ gpg --gen-key
 Enter our name and email when asked for it and also, the time of validity for the key defaults to 2 years. Once they
 key is expired we can extend it, provided we own the key and therefore know the passphrase.
 
+> [!CAUTION]
+> Please keep in deep mind that **the GPG key name entered cannot contain white space!**
+
 ```console
 $ gpg --gen-key
 gpg (GnuPG) 2.2.19; Copyright (C) 2019 Free Software Foundation, Inc.
@@ -103,10 +106,10 @@ Note: Use "gpg --full-generate-key" for a full featured key generation dialog.
 
 GnuPG needs to construct a user ID to identify your key.
 
-Real name: Central Repo Test
+Real name: my-gpg-keyname
 Email address: central@example.com
 You selected this USER-ID:
-    "Central Repo Test <central@example.com>"
+    "my-gpg-keyname <central@example.com>"
 
 Change (N)ame, (E)mail, or (O)kay/(Q)uit? O
 We need to generate a lot of random bytes. It is a good idea to perform
@@ -124,7 +127,7 @@ public and secret key created and signed.
 
 pub   rsa3072 2021-06-23 [SC] [expires: 2023-06-23]
       CA925CD6C9E8D064FF05B4728190C4130ABA0F98
-uid                      Central Repo Test <central@example.com>
+uid                      my-gpg-keyname <central@example.com>
 sub   rsa3072 2021-06-23 [E] [expires: 2023-06-23]
 ```
 
@@ -135,7 +138,13 @@ private key** are all that is needed to sign artifacts with our signature.
 
 > [!TIP]
 > - **[Create a GitHub Secret] named *GPG_PASSPHRASE* whose value is the passphrase**
-> - **[Create a GitHub Secret] named *GPG_KEYNAME* whose value is like the "*Central Repo Test*" shown above**
+> - **[Create a GitHub Secret] named *GPG_KEYNAME* whose value, in the example above, is the "*my-gpg-keyname*" shown
+> above**
+
+Please keep in deep mind that **GPG_KEYNAME cannot contain white space!**
+
+> [!CAUTION]
+> Please allow me to press it again - keep in mind that **GPG_KEYNAME cannot contain white space!**
 
 To export the private key, list it along with any other keys installed:
 
@@ -145,7 +154,7 @@ $ gpg --list-keys
 ---------------------------------
 pub   rsa3072 2021-06-23 [SC] [expires: 2023-06-23]
       CA925CD6C9E8D064FF05B4728190C4130ABA0F98
-uid           [ultimate] Central Repo Test <central@example.com>
+uid           [ultimate] my-gpg-keyname <central@example.com>
 sub   rsa3072 2021-06-23 [E] [expires: 2023-06-23]
 ```
 
@@ -453,7 +462,7 @@ specified correctly**:
 - **gpg-private-key**
 - **gpg-passphrase**
 
-Please note that the `gpg-keyname` in the following example is *Central Repo Test*:
+Please note that the `gpg-keyname` in the following example is *my-gpg-keyname*:
 
 ```console
 $ gpg --list-keys
@@ -461,7 +470,7 @@ $ gpg --list-keys
 ---------------------------------
 pub   rsa3072 2021-06-23 [SC] [expires: 2023-06-23]
       CA925CD6C9E8D064FF05B4728190C4130ABA0F98
-uid           [ultimate] Central Repo Test <central@example.com>
+uid           [ultimate] my-gpg-keyname <central@example.com>
 sub   rsa3072 2021-06-23 [E] [expires: 2023-06-23]
 ```
 
