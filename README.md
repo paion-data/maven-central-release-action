@@ -549,4 +549,3 @@ The use and distribution terms for [maven-central-release-action] are covered by
 [maven-central-release-action]: https://github.com/paion-data/maven-central-release-action
 
 [Versions Maven Plugin]: https://www.mojohaus.org/versions/versions-maven-plugin/update-properties-mojo.html
-
