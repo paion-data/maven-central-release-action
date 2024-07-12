@@ -22,4 +22,4 @@ name: CI/CD
 
 jobs:
   yml-md-style-and-link-checks:
-    uses: paion-data/github-actions-core/.github/workflows/yml-md-style-and-link-checks.yml@master
+    uses: paion-data/immutable-infrastructure-as-a-service/.github/workflows/yml-md-style-and-link-checks.yml@master
