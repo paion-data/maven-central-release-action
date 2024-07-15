@@ -67,7 +67,7 @@ runs:
         git config --global user.name ${{ inputs.user }}
         git config --global user.email ${{ inputs.email }}
 
-        git clone https://github.com/QubitPi/immutable-infrastructure-as-a-service.git ../immutable-infrastructure-as-a-service
+        git clone https://github.com/paion-data/immutable-infrastructure-as-a-service.git ../immutable-infrastructure-as-a-service
         cp ../immutable-infrastructure-as-a-service/.github/version-bump/tag-for-release.bash .github/
         cp ../immutable-infrastructure-as-a-service/.github/version-bump/upversion.py .github/
         .github/tag-for-release.bash
